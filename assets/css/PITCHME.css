@@ -1,0 +1,18 @@
+.spaced li {
+  margin:0 0 10px 0;
+}
+
+.shadow {
+  box-shadow:0 14px 20px 0 rgba(0,0,0,0.2),0 10px 24px 0 rgba(0,0,0,0.19) !important;
+}
+
+
+.text-cfb   { color: CornflowerBlue !important; }
+.text-lsg   { color: LightSeaGreen  !important; }
+.text-lsb   { color: LightSkyBlue   !important; }
+.text-yel   { color: Yellow         !important; }
+.text-ora   { color: Orange         !important; }
+
+.h2-cfb   h2 { color: CornflowerBlue !important; }
+.h2-lsg   h2 { color: LightSeaGreen  !important; }
+
