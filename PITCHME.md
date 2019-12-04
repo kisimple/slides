@@ -71,7 +71,7 @@
 
 ---?color=linear-gradient(to right, CornflowerBlue 50%, white 50%)
 
-@snap[west span-45 text-center h2-white text-white text-07 font-righteous]
+@snap[west span-45 text-center h2-white text-white text-07]
 ## Spark
 <br/>
 >@fa[quote-left] RDDs are motivated by two types of applications that current computing frameworks handle inefficiently: iterative algorithms and interactive data mining tools. [3]
@@ -86,7 +86,7 @@
 
 ---?color=linear-gradient(to right, CornflowerBlue 50%, white 50%)
 
-@snap[west span-45 text-center h2-white text-white text-07 font-righteous]
+@snap[west span-45 text-center h2-white text-white text-07]
 ## Storm
 <br/>
 >@fa[quote-left] Before Storm, you would typically have to manually build a network of queues and workers to do realtime processing. Workers would process messages off a queue, update databases, and send new messages to other queues for further processing. [4]
@@ -96,6 +96,38 @@
 @fa[quote-left] Like how <font style="font-size:180%">MapReduce</font> greatly eases the writing of parallel batch processing, Storm's primitives greatly ease the writing of parallel realtime computation. [4]
 <br/>
 ![](assets/img/storm_flow.png)
+@snapend
+
+
+---?color=linear-gradient(to right, CornflowerBlue 50%, white 50%)
+
+@snap[west span-45 text-center h2-white text-white text-06]
+## Lambda Architecture
+<br/>
+>@fa[quote-left] The LA aims to satisfy the needs for a robust system that is fault-tolerant, both against hardware failures and human mistakes, being able to serve a wide range of workloads and use cases, and in which low-latency reads and updates are required. [34]
+@snapend
+
+@snap[east span-50 text-center]
+![](assets/img/lambda_arch.png)
+@snapend
+
+@snap[east span-47 text-center text-lc text-06 text-italic bg-white fragment]
+@fa[quote-left] why can’t the stream processing system just be improved to handle the full problem set in its target domain? [35]
+@snapend
+
+
+---?color=linear-gradient(to right, CornflowerBlue 50%, white 50%)
+
+@snap[west span-45 text-center h2-white text-white text-06]
+## Kappa Architecture
+<br/>
+>@fa[quote-left] The fundamental abstraction in stream processing is data flow DAGs, which are exactly the same underlying abstraction in a traditional data warehouse (a la Volcano) as well as being the fundamental abstraction in the MapReduce successor Tez. [35]
+@snapend
+
+@snap[east span-47 text-center text-lsb text-06 font-righteous]
+@fa[quote-left] there is no reason that a stream processing system can’t give as strong a semantic guarantee as a batch system. [35]
+<br/>
+![](assets/img/kappa_arch.png)
 @snapend
 
 
@@ -116,7 +148,7 @@
 
 ---?color=linear-gradient(to right, CornflowerBlue 50%, white 50%)
 
-@snap[west span-45 text-center h2-white text-white text-07 font-righteous]
+@snap[west span-45 text-center h2-white text-white text-07]
 ## MillWheel
 <br/>
 >@fa[quote-left] Comparing MillWheel to existing models for streaming systems, such as Yahoo! S4, Storm, and Sonora, we find that their models are insufficiently general for our desired class of problems. [8]
@@ -154,7 +186,7 @@
 @snap[midpoint span-70 text-08]
 ## Beam
 
-![](assets/img/beam_architecture.png)
+![](assets/img/beam_arch.png)
 @snapend
 
 
@@ -777,8 +809,9 @@ Flink Network Stack Vol. 2: Monitoring, Metrics, and that Backpressure Thing](ht
 [31] [An Intro to Incremental Checkpointing](https://flink.apache.org/features/2018/01/30/incremental-checkpointing.html)
 [32] [A Deep Dive into Rescalable State in Apache Flink](https://flink.apache.org/features/2017/07/04/flink-rescalable-state.html)
 [33] [o.a.f.r.s.KeyGroupRangeAssignment](https://github.com/apache/flink/blob/release-1.6.2/flink-runtime/src/main/java/org/apache/flink/runtime/state/KeyGroupRangeAssignment.java#L126)
-[34] [\[FLINK-8297\] RocksDBListState stores whole list in single byte\[\]](https://issues.apache.org/jira/browse/FLINK-8297)
-[35] [A look at Flink's internal data structures and algorithms for efficient checkpointing](https://berlin-2017.flink-forward.org/kb_sessions/a-look-at-flinks-internal-data-structures-and-algorithms-for-efficient-checkpointing/)
+[34] [Lambda Architecture](http://lambda-architecture.net/)
+[35] [Questioning the Lambda Architecture](https://www.oreilly.com/radar/questioning-the-lambda-architecture/)
+[36] [\[FLINK-8297\] RocksDBListState stores whole list in single byte\[\]](https://issues.apache.org/jira/browse/FLINK-8297)
 @snapend
 
 
