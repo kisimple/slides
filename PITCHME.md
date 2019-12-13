@@ -324,7 +324,7 @@
 ---
 
 @snap[west span-48 text-center text-08 font-righteous]
-<div style="font-size:200%;color:#268bd2">**Throughput**</div>
+**<font style="font-size:200%;color:#268bd2">Throughput</font>**
 <br/>
 ```yaml
 # Size of memory buffers used by the
@@ -334,7 +334,7 @@ taskmanager.memory.segment-size: "32kb"
 @snapend
 
 @snap[east span-48 text-center text-08 font-righteous fragment]
-<div style="font-size:200%;color:#859900">**Latency**</div>
+**<font style="font-size:200%;color:#859900">Latency</font>**
 <br/>
 ```java
 // Set buffer timeout to 1 to enable
@@ -358,10 +358,10 @@ StreamExecutionEnvironment env =
 
 @snap[east span-45 text-left text-gray text-06 font-bubblegum]
 @ul[list-square-bullets](false)
-- <font style="color:orange;font-size:200%">**- Flink 1.8**</font>
+- **<font style="color:orange;font-size:200%">- Flink 1.8</font>**
     - `outPoolUsage`
     - `inPoolUsage`
-- <font style="color:LightSeaGreen;font-size:200%">**Flink 1.9 +**</font>
+- **<font style="color:LightSeaGreen;font-size:200%">Flink 1.9 +</font>**
     - `outPoolUsage`
     - `inPoolUsage`
     - `floatingBuffersUsage`
@@ -440,7 +440,7 @@ StreamExecutionEnvironment env =
 ---
 
 @snap[west span-48 text-center text-08 font-righteous]
-<div style="font-size:180%;color:white">**Late Elements**</div>
+**<font style="font-size:180%;color:white">Late Elements</font>**
 <br/>
 ```java
 final OutputTag<T> lateOutputTag =
@@ -462,7 +462,7 @@ DataStream<T> lateStream =
 @snapend
 
 @snap[east span-48 text-center text-08 font-righteous]
-<div style="font-size:180%;color:white">**Idle Sources**</div>
+**<font style="font-size:180%;color:white">Idle Sources</font>**
 <br/>
 ```java
 /**
