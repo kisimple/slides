@@ -19,7 +19,7 @@
 
 ---
 
-@snap[text-06]
+@snap[midpoint text-03]
 ```plaintext
  MapReduce                       FlumeJava      Stratosphere       Storm  Trident         Flink
     ||                              ||              ||              ||      ||              ||
@@ -93,7 +93,7 @@
 @snapend
 
 @snap[east span-47 text-center text-lsb text-06 font-righteous]
-@fa[quote-left] Like how <font style="font-size:180%">MapReduce</font> greatly eases the writing of parallel batch processing, Storm's primitives greatly ease the writing of parallel realtime computation. [4]
+@fa[quote-left] Like how <font style="font-size:150%">MapReduce</font> greatly eases the writing of parallel batch processing, Storm's primitives greatly ease the writing of parallel realtime computation. [4]
 <br/>
 ![](assets/img/storm_flow.png)
 @snapend
@@ -140,9 +140,9 @@
 @snapend
 
 @snap[east span-45 text-left text-cfb text-06 font-righteous]
-@fa[quote-left] Each batch of tuples is given a <font style="font-size:180%">UNIQUE ID</font> called the "transaction id" (txid). [7]
+@fa[quote-left] Each batch of tuples is given a <font style="font-size:150%">UNIQUE ID</font> called the "transaction id" (txid). [7]
 <br/>
-@fa[quote-left] State updates are <font style="font-size:180%">ORDERED</font> among batches. [7]
+@fa[quote-left] State updates are <font style="font-size:150%">ORDERED</font> among batches. [7]
 @snapend
 
 
@@ -197,7 +197,7 @@
 
 ---
 
-@snap[text-09]
+@snap[midpoint text-08]
 ```plaintext
                         Release 0.7.0
  Stratosphere[11]       - Flink Streaming
@@ -272,7 +272,7 @@
 @snapend
 
 @snap[east span-47 text-center text-lsb text-06 font-righteous]
-@fa[quote-left] Note that no CPU isolation happens here; currently slots only separate the <font style="font-size:180%">MANAGED MEMORY</font>of tasks. [16][17]
+@fa[quote-left] Note that no CPU isolation happens here; currently slots only separate the <font style="font-size:150%">MANAGED MEMORY</font>of tasks. [16][17]
 <br/>
 ![](assets/img/task_slot.png)
 @snapend
@@ -295,7 +295,7 @@
 
 ---
 
-@snap[text-05 h2-white]
+@snap[midpoint text-04 h2-white]
 ## Network Stack
 <br/>
 ```plaintext
@@ -323,7 +323,7 @@
 
 ---
 
-@snap[west span-48 text-center text-08 font-righteous]
+@snap[west span-48 text-center text-06 font-righteous]
 **<font style="font-size:200%;color:#268bd2">Throughput</font>**
 <br/>
 ```yaml
@@ -333,7 +333,7 @@ taskmanager.memory.segment-size: "32kb"
 ```
 @snapend
 
-@snap[east span-48 text-center text-08 font-righteous fragment]
+@snap[east span-48 text-center text-06 font-righteous fragment]
 **<font style="font-size:200%;color:#859900">Latency</font>**
 <br/>
 ```java
@@ -353,7 +353,7 @@ StreamExecutionEnvironment env =
 @snap[west span-50 text-center h2-white text-white text-06 font-righteous]
 ## Backpressure
 <br/>
->@fa[quote-left] The backpressure monitor samples the running tasks’ threads on all TaskManagers via <font style="font-size:180%;font-family:Bubblegum">Thread.getStackTrace()</font> and computes the number of samples where tasks were <font style="font-size:150%">BLOCKED</font> on a buffer request. [18][19]
+>@fa[quote-left] The backpressure monitor samples the running tasks’ threads on all TaskManagers via <font style="font-size:150%;font-family:Bubblegum">Thread.getStackTrace()</font> and computes the number of samples where tasks were <font style="font-size:150%">BLOCKED</font> on a buffer request. [18][19]
 @snapend
 
 @snap[east span-45 text-left text-gray text-06 font-bubblegum]
@@ -415,11 +415,11 @@ StreamExecutionEnvironment env =
 @snap[west span-45 text-center h2-white text-white text-06 font-righteous]
 ## Watermark
 <br/>
->@fa[quote-left] A stream processor that supports <font style="font-size:180%">EVENT TIME</font> needs a way to measure the progress of event time. For example, a window operator that builds hourly windows needs to be notified when event time has passed beyond the end of an hour, so that the operator can close the window in progress. [21]
+>@fa[quote-left] A stream processor that supports <font style="font-size:150%">EVENT TIME</font> needs a way to measure the progress of event time. For example, a window operator that builds hourly windows needs to be notified when event time has passed beyond the end of an hour, so that the operator can close the window in progress. [21]
 @snapend
 
 @snap[east span-47 text-center text-lsb text-06 font-righteous]
-@fa[quote-left] A *WATERMARK(t)* declares that event time has reached time t in that stream, meaning that there should be no more elements from the stream with a timestamp t' <= t. [21][22]
+@fa[quote-left] A WATERMARK(t) declares that event time has reached time t in that stream, meaning that there should be no more elements from the stream with a timestamp t' <= t. [21][22]
 <br/>
 ![](assets/img/watermarks.png)
 @snapend
@@ -439,7 +439,7 @@ StreamExecutionEnvironment env =
 
 ---
 
-@snap[west span-48 text-center text-08 font-righteous]
+@snap[west span-48 text-center text-05 font-righteous]
 **<font style="font-size:180%;color:white">Late Elements</font>**
 <br/>
 ```java
@@ -461,7 +461,7 @@ DataStream<T> lateStream =
 ```
 @snapend
 
-@snap[east span-48 text-center text-08 font-righteous]
+@snap[east span-48 text-center text-05 font-righteous]
 **<font style="font-size:180%;color:white">Idle Sources</font>**
 <br/>
 ```java
@@ -476,7 +476,7 @@ DataStream<T> lateStream =
 void markAsTemporarilyIdle();
 ```
 <br/>
-<div style="color:SteelBlue;font-size:40%">[23]</div>
+<div style="color:SteelBlue;font-size:60%">[23]</div>
 @snapend
 
 
@@ -527,7 +527,7 @@ void markAsTemporarilyIdle();
 
 ---
 
-@snap[text-08]
+@snap[text-07]
 ```scala
   // cache to store rows from the left stream
   private var leftCache: MapState[Long, JList[JTuple2[Row, Boolean]]] = _
@@ -535,7 +535,7 @@ void markAsTemporarilyIdle();
   private var rightCache: MapState[Long, JList[JTuple2[Row, Boolean]]] = _
 ```
 <br/>
-<div style="color:SteelBlue;font-size:40%">[25]</div>
+<div style="color:SteelBlue;font-size:50%">[25]</div>
 @snapend
 
 
@@ -741,7 +741,7 @@ void markAsTemporarilyIdle();
 
 ---
 
-@snap[text-07]
+@snap[midpoint text-06]
 ```java
   public static int computeDefaultMaxParallelism(int operatorParallelism) {
 
@@ -755,7 +755,7 @@ void markAsTemporarilyIdle();
   }
 ```
 <br/>
-<div style="color:SteelBlue;font-size:40%">[33]</div>
+<div style="color:SteelBlue;font-size:50%">[33]</div>
 @snapend
 
 
